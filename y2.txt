@@ -1,1 +1,329 @@
 file y2 from vetka sasha
+
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2 (master)
+$ git push origin master
+To https://github.com/NovozhilovAV/test.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/NovozhilovAV/test.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2 (master)
+$ git branch sasha
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2 (master)
+$ git add .
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2 (master)
+$ git checout sasha
+git: 'checout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2 (master)
+$ git add .
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2 (master)
+$ git commit -m 'add txt file2'
+[master dcb855f] add txt file2
+ 1 file changed, 3 insertions(+)
+ create mode 100644 add12.txt
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2 (master)
+$ git checkout sasha
+Switched to branch 'sasha'
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2 (sasha)
+$ git add .
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2 (sasha)
+$ git commit -m 'add txt file23'
+On branch sasha
+nothing to commit, working tree clean
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2 (sasha)
+$ git status
+On branch sasha
+nothing to commit, working tree clean
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2 (sasha)
+$ c
+bash: c: command not found
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2 (sasha)
+$ cd test
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git add .
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   add11.txt
+
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git commit -m 'add txt file123'
+[master 9767e81] add txt file123
+ 1 file changed, 1 insertion(+)
+ create mode 100644 add11.txt
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git checkout sasha
+error: pathspec 'sasha' did not match any file(s) known to git
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git checkout -f sasha
+error: pathspec 'sasha' did not match any file(s) known to git
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git branch
+* master
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git branch sasha
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git branch
+* master
+  sasha
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git checkout sasha
+Switched to branch 'sasha'
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (sasha)
+$ git add .
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (sasha)
+$ git commit -m 'add txt file111'
+On branch sasha
+nothing to commit, working tree clean
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (sasha)
+$ git status
+On branch sasha
+nothing to commit, working tree clean
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (sasha)
+$ git push origin sasha
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 285 bytes | 285.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'sasha' on GitHub by visiting:
+remote:      https://github.com/NovozhilovAV/test/pull/new/sasha
+remote:
+To https://github.com/NovozhilovAV/test.git
+ * [new branch]      sasha -> sasha
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (sasha)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git checkout 9767e81 add11.txt
+Updated 0 paths from e22fe7f
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git commit -m 'add.txt file from master on sasha'
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git push origin sasha
+Everything up-to-date
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git commit -m 'add.txt file from master on sasha'
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git checkout 9767e81 add11.txt
+Updated 0 paths from e22fe7f
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git push origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/NovozhilovAV/test.git
+   e3ea349..9767e81  master -> master
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git add .
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   x1.txt
+        new file:   y2.txt
+
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git reset y2.txt
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   x1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        y2.txt
+
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git commit -m 'x1.txt file from master'
+[master 47599f3] x1.txt file from master
+ 1 file changed, 1 insertion(+)
+ create mode 100644 x1.txt
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 308 bytes | 308.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/NovozhilovAV/test.git
+   9767e81..47599f3  master -> master
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git checkout sasha
+Switched to branch 'sasha'
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (sasha)
+$ git add .
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (sasha)
+$ git status
+On branch sasha
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   y2.txt
+
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (sasha)
+$ git commit -m 'y2.txt file from sasha'
+[sasha 2398ad5] y2.txt file from sasha
+ 1 file changed, 1 insertion(+)
+ create mode 100644 y2.txt
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (sasha)
+$ git push origin sasha
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 305 bytes | 305.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/NovozhilovAV/test.git
+   9767e81..2398ad5  sasha -> sasha
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (sasha)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git merge sasha
+Merge made by the 'ort' strategy.
+ y2.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 y2.txt
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$ git log
+commit b22f240c0a179a942cdbb9ed05554637212df02e (HEAD -> master)
+Merge: 47599f3 2398ad5
+Author: NovozhilovAV <tema.reida87@mail.ru>
+Date:   Tue Feb 21 21:30:13 2023 +0300
+
+    Merge branch 'sasha'
+    fgfggfnnn
+
+commit 2398ad532c554b2a3baf40db620cc886ce412d26 (origin/sasha, sasha)
+Author: NovozhilovAV <tema.reida87@mail.ru>
+Date:   Tue Feb 21 21:29:06 2023 +0300
+
+    y2.txt file from sasha
+
+commit 47599f3e12acc9c4abde6c575088d53793bbe0d6 (origin/master, origin/HEAD)
+Author: NovozhilovAV <tema.reida87@mail.ru>
+Date:   Tue Feb 21 21:27:31 2023 +0300
+
+    x1.txt file from master
+
+commit 9767e8105707d41355bc10cde4d70dc243843846
+Author: NovozhilovAV <tema.reida87@mail.ru>
+Date:   Tue Feb 21 20:58:08 2023 +0300
+
+    add txt file123
+
+commit e3ea34903299a65ca861935eb14c3e24ba950f8c
+Author: NovozhilovAV <tema.reida87@mail.ru>
+Date:   Fri Feb 17 22:04:12 2023 +0300
+
+    first1 commit
+
+commit d34a8bb6bbae4cded5be0bb61fb4be1459124890
+Author: NovozhilovAV <tema.reida87@mail.ru>
+Date:   Fri Feb 17 20:30:37 2023 +0300
+
+    Add new commit
+
+t.student@1004-9 MINGW64 ~/PycharmProjects/pythonProjectNovozhilov2/test (master)
+$
