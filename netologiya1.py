@@ -28,17 +28,16 @@
 # Модифицируйте программу из задания 2 таким образом,
 # чтобы данные не выводились на экран, а сохранялись в словарь.
 # Ключами в этом словаре должны быть даты, а значениями - соответствующие им задачи..
-
-date1 = input("Введите дату: ")
-task1 = input("Ведите задачу: ")
-date2 = input("Введите дату: ")
-task2 = input("Ведите задачу: ")
-date3 = input("Введите дату: ")
-task3 = input("Ведите задачу: ")
-
-a = dict.fromkeys(date1, task1)
-print(a)
-# a['date2'] = 'task2'
-# print(a)    # {'1': '1', 'date2': 'task2'}
-
-
+# tasdate = {}
+# date1 = input("Введите дату: ")
+# task1 = input("Ведите задачу: ")
+# tasdate[date1] = task1
+# print(tasdate)
+# date2 = input("Введите дату: ")
+# task2 = input("Ведите задачу: ")
+# tasdate[date2] = task2
+# print(tasdate)
+# date3 = input("Введите дату: ")
+# task3 = input("Ведите задачу: ")
+# tasdate[date3] = task3
+# print(tasdate)
