@@ -63,9 +63,8 @@
 # while x <= 10:
 #   print(x)
 #   x = x + 1
-#
-# print(x)
 
+# print(x)
 
 # Урок 2. Задание 1
 # https://github.com/netology-code/pyfree-homeworks/blob/main/homeworks/2.md.
@@ -126,4 +125,48 @@ while run:
     break
 
 print("До свидания!")
+
+# решение от преподователя - переработать код!!!!
+# https://replit.com/@Netology/hw22#main.py
+
+# today = list() # today = []
+# tomorrow = list() # tomorrow = []
+# other = list() # other = []
+#
+#
+# HELP = '''
+# Список доступных команд:
+# * print  - напечать все задачи на заданную дату
+# * todo - добавить задачу
+# * help - Напечатать help
+# '''
+#
+#
+# while True:
+#     command = input('Введите команду\n')
+#     if command == 'help':
+#         print(HELP)
+#     elif command == 'todo':
+#         date = input('Введите дату: ')
+#         task = input('Введите задачу: ')
+#         if date == 'Сегодня':
+#           today.append(task)
+#         elif date == 'Завтра':
+#           tomorrow.append(task)
+#         else:
+#           other.append(task)
+#         print(f'Задача {task} добавлена')
+#     elif command == 'show':
+#         print('Сегодня')
+#         print(today)
+#         print('Завтра')
+#         print(tomorrow)
+#         print('Другие')
+#         print(other)
+#     elif command == 'exit':
+#         print('Спасибо за использование! До свидания!')
+#         break
+#     else:
+#         print('Неизвестная команда!')
+#         break.
 
