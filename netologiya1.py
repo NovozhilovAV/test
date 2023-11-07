@@ -63,7 +63,6 @@
 # while x <= 10:
 #   print(x)
 #   x = x + 1
-
 # print(x)
 
 # Урок 2. Задание 1
@@ -132,16 +131,14 @@ print("До свидания!")
 # today = list() # today = []
 # tomorrow = list() # tomorrow = []
 # other = list() # other = []
-#
-#
+
 # HELP = '''
 # Список доступных команд:
 # * print  - напечать все задачи на заданную дату
 # * todo - добавить задачу
 # * help - Напечатать help
 # '''
-#
-#
+
 # while True:
 #     command = input('Введите команду\n')
 #     if command == 'help':
