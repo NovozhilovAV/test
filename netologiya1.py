@@ -83,49 +83,56 @@
 # Если пользователь ввел "Завтра", добавьте задачу в список tomorrow.
 # Если пользователь ввел любое другое значение, добавьте задачу в список other.
 
-HELP = """
-help - напечатать справку по программе.
-add - добавить задачу в список (название задачи запрашиваем у пользователя).
-show - напечатать все добавленные задачи."""
-tasks = []
-# создаем три списка
-today = []
-tomorrow = []
-other = []
+# HELP = """
+# help - напечатать справку по программе.
+# add - добавить задачу в список (название задачи запрашиваем у пользователя).
+# show - напечатать все добавленные задачи.
+# random - добавить случайную задачу на сегодня
+# """
+# Random_task = 'Учиться програмированию'
+# tasks = {}    # создаем словарь - задача/дата(ранее был список)
+# today = []
+# tomorrow = []
+# other = []
+# # создаем три списка - Сегодня-завтра -послезавтра
+#
+# while True:
+#   command = input("Введите команду: ")
+#   if command == "help":
+#     print(HELP)
+#   elif command == "show":
+#       dt = input("Введите дату для отображения задач : ")
+#       if dt in tasks:
+#           for task in tasks[dt]:
+#               print(' - ', task)
+#       else:
+#           print('Такой даты нет! ')
+#   elif command == "add":
+#     task = input("Введите название задачи: ")
+#     dt = input("Ведите дату выполнения задачи - сегодня/завтра/послезавтра : ")
+#     if dt in tasks:
+#         tasks[dt].append(task)   # если дата есть в словаре,добавляем задачу в список
+#     else:
+#         tasks[dt] = []
+#         tasks[dt].append(task)    # даты в словаре неу,создаем запись с ключом даты
+#     print(f'Задача ', task, ' на ', dt, ' добавлена!')
+#   elif command == 'random':
+#       if 'Сегодня' in tasks:
+#           tasks['Сегодня'].append(Random_task)
+#       else:
+#           tasks['Сегодня'] = []
+#           tasks['Сегодня'].append(Random_task)
+#
+#   elif command == "exit":
+#       print("Спасибо за использование!")
+#       break
+#   else:
+#     print("Неизвестная команда")
+#     break
+#
+# print("До свидания!")
 
-run = True
-while run:
-  command = input("Введите команду: ")
-  if command == "help":
-    print(HELP)
-  elif command == "show":
-    print(tasks)
-  elif command == "add":
-    task = input("Введите название задачи: ")
-    tasks.append(task)
-    print("Задача добавлена")
-
-    dt = input("Ведите дату выполнения задачи - сегодня/завтра/после: ")
-    if dt == "Сегодня":
-        today.append(dt)
-        print(f'Задача ' + task + ' на ' + dt + ' добавлена!')
-    if dt == "Завтра":
-        tomorrow.append(dt)
-        print(f'Задача ' + task + ' на ' + dt + ' добавлена!')
-    if dt == "После":
-        other.append(dt)
-        print(f'Задача ' + task + ' на ' + dt + ' добавлена!')
-
-  elif command == "exit":
-      print("Спасибо за использование!")
-      break
-  else:
-    print("Неизвестная команда")
-    break
-
-print("До свидания!")
-
-# решение от преподователя - переработать код!!!!
+# решение от преподователя
 # https://replit.com/@Netology/hw22#main.py
 
 # today = list() # today = []
@@ -167,3 +174,52 @@ print("До свидания!")
 #         print('Неизвестная команда!')
 #         break.
 
+# Урок №3 - используем функции
+HELP = """
+help - напечатать справку по программе.
+add - добавить задачу в список (название задачи запрашиваем у пользователя).
+show - напечатать все добавленные задачи.
+random - добавить случайную задачу на сегодня
+"""
+Random_task = 'Учиться програмированию'
+tasks = {}    # создаем словарь - задача/дата(ранее был список)
+today = []
+tomorrow = []
+other = []
+# создаем три списка - Сегодня-завтра -послезавтра
+
+while True:
+  command = input("Введите команду: ")
+  if command == "help":
+    print(HELP)
+  elif command == "show":
+      dt = input("Введите дату для отображения задач : ")
+      if dt in tasks:
+          for task in tasks[dt]:
+              print(' - ', task)
+      else:
+          print('Такой даты нет! ')
+  elif command == "add":
+    task = input("Введите название задачи: ")
+    dt = input("Ведите дату выполнения задачи - сегодня/завтра/послезавтра : ")
+    if dt in tasks:
+        tasks[dt].append(task)   # если дата есть в словаре,добавляем задачу в список
+    else:
+        tasks[dt] = []
+        tasks[dt].append(task)    # даты в словаре неу,создаем запись с ключом даты
+    print(f'Задача ', task, ' на ', dt, ' добавлена!')
+  elif command == 'random':
+      if 'Сегодня' in tasks:
+          tasks['Сегодня'].append(Random_task)
+      else:
+          tasks['Сегодня'] = []
+          tasks['Сегодня'].append(Random_task)
+
+  elif command == "exit":
+      print("Спасибо за использование!")
+      break
+  else:
+    print("Неизвестная команда")
+    break
+
+print("До свидания!")
