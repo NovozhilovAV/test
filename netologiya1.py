@@ -42,7 +42,6 @@
 # tasdate[date3] = task3
 # print(tasdate)
 
-
 # name = input("Введите имя: ")
 # login = "Dima"
 # # name = "Yo"
@@ -56,7 +55,6 @@
 # else:
 #   # Выражение False
 #   print("Hello, user!")
-#
 # print("The end")
 
 # x = 1
@@ -134,7 +132,6 @@
 
 # решение от преподователя
 # https://replit.com/@Netology/hw22#main.py
-
 # today = list() # today = []
 # tomorrow = list() # tomorrow = []
 # other = list() # other = []
@@ -187,6 +184,18 @@ today = []
 tomorrow = []
 other = []
 # создаем три списка - Сегодня-завтра -послезавтра
+# создадаим функцию и пропишем в ней
+# повторяющийся участок кода для проверки словаря
+def add_todo(dt, task):
+    if dt in tasks:
+        tasks[dt].append(task)
+        # если дата есть в словаре,добавляем задачу в список
+    else:
+        tasks[dt] = []
+        tasks[dt].append(task)
+        # даты в словаре нету,создаем запись с ключом даты
+    print(f'Задача ', task, ' на ', dt, ' добавлена!')
+
 
 while True:
   command = input("Введите команду: ")
@@ -199,21 +208,13 @@ while True:
               print(' - ', task)
       else:
           print('Такой даты нет! ')
+
   elif command == "add":
     task = input("Введите название задачи: ")
-    dt = input("Ведите дату выполнения задачи - сегодня/завтра/послезавтра : ")
-    if dt in tasks:
-        tasks[dt].append(task)   # если дата есть в словаре,добавляем задачу в список
-    else:
-        tasks[dt] = []
-        tasks[dt].append(task)    # даты в словаре неу,создаем запись с ключом даты
-    print(f'Задача ', task, ' на ', dt, ' добавлена!')
+    add_todo(dt, tasks)
+
   elif command == 'random':
-      if 'Сегодня' in tasks:
-          tasks['Сегодня'].append(Random_task)
-      else:
-          tasks['Сегодня'] = []
-          tasks['Сегодня'].append(Random_task)
+      add_todo('Сегодня', Random_task)
 
   elif command == "exit":
       print("Спасибо за использование!")
@@ -223,3 +224,16 @@ while True:
     break
 
 print("До свидания!")
+
+# Домашнее задание к занятию 3. Функции. Разработка приложения
+# https://github.com/netology-code/pyfree-homeworks/blob/main/homeworks/3.md
+# Задание 1
+# Реализуйте функцию count_letter, которая принимает список слов и некоторую букву
+# и возвращает количество слов в списке, в которых эта буква встречается хотя бы один раз.
+#
+# Например, для списка ['python', 'c++', 'c', 'scala', 'java'] и буквы c ваша функция
+# должна вернуть число 3.
+# Подсказки
+# Используйте конструкцию for word in ... для итерации по списку.
+# Используйте переменную для хранения промежуточного результата подсчета.
+# Используйте конструкцию letter in word для проверки наличия буквы в слове.
