@@ -186,44 +186,44 @@ other = []
 # создаем три списка - Сегодня-завтра -послезавтра
 # создадаим функцию и пропишем в ней
 # повторяющийся участок кода для проверки словаря
-def add_todo(dt, task):
-    if dt in tasks:
-        tasks[dt].append(task)
-        # если дата есть в словаре,добавляем задачу в список
-    else:
-        tasks[dt] = []
-        tasks[dt].append(task)
-        # даты в словаре нету,создаем запись с ключом даты
-    print(f'Задача ', task, ' на ', dt, ' добавлена!')
-
-
-while True:
-  command = input("Введите команду: ")
-  if command == "help":
-    print(HELP)
-  elif command == "show":
-      dt = input("Введите дату для отображения задач : ")
-      if dt in tasks:
-          for task in tasks[dt]:
-              print(' - ', task)
-      else:
-          print('Такой даты нет! ')
-
-  elif command == "add":
-    task = input("Введите название задачи: ")
-    add_todo(dt, tasks)
-
-  elif command == 'random':
-      add_todo('Сегодня', Random_task)
-
-  elif command == "exit":
-      print("Спасибо за использование!")
-      break
-  else:
-    print("Неизвестная команда")
-    break
-
-print("До свидания!")
+# def add_todo(dt, task):
+#     if dt in tasks:
+#         tasks[dt].append(task)
+#         # если дата есть в словаре,добавляем задачу в список
+#     else:
+#         tasks[dt] = []
+#         tasks[dt].append(task)
+#         # даты в словаре нету,создаем запись с ключом даты
+#     print(f'Задача ', task, ' на ', dt, ' добавлена!')
+#
+#
+# while True:
+#   command = input("Введите команду: ")
+#   if command == "help":
+#     print(HELP)
+#   elif command == "show":
+#       dt = input("Введите дату для отображения задач : ")
+#       if dt in tasks:
+#           for task in tasks[dt]:
+#               print(' - ', task)
+#       else:
+#           print('Такой даты нет! ')
+#
+#   elif command == "add":
+#     task = input("Введите название задачи: ")
+#     add_todo(dt, tasks)
+#
+#   elif command == 'random':
+#       add_todo('Сегодня', Random_task)
+#
+#   elif command == "exit":
+#       print("Спасибо за использование!")
+#       break
+#   else:
+#     print("Неизвестная команда")
+#     break
+#
+# print("До свидания!")
 
 # Домашнее задание к занятию 3. Функции. Разработка приложения
 # https://github.com/netology-code/pyfree-homeworks/blob/main/homeworks/3.md
@@ -237,3 +237,17 @@ print("До свидания!")
 # Используйте конструкцию for word in ... для итерации по списку.
 # Используйте переменную для хранения промежуточного результата подсчета.
 # Используйте конструкцию letter in word для проверки наличия буквы в слове.
+
+word = ['python', 'c++', 'c', 'scala', 'java']
+wt = 'c'
+
+def count_letter(word, wt):
+    ct = 0
+    for i in word:
+        if wt in i:
+            ct += 1
+
+    return ct
+
+a = count_letter(word, wt)
+print(a)
