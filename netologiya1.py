@@ -261,3 +261,34 @@ print(a)
 #   return result
 #
 # print(count_letter(['python', 'c++', 'c', 'scala', 'java'], 'c'))
+
+# код с лекции №4 https://github.com/netology-code/pyfree-homeworks/blob/main/code/echobot.py
+
+# import telebot
+#
+# token = ''
+#
+# bot = telebot.TeleBot(token)
+#
+#
+# @bot.message_handler(content_types=["text"])
+# def echo(message):
+#     bot.send_message(message.chat.id, message.text)
+#
+#
+# bot.polling(none_stop=True)
+
+# Инструкция по работе с PythonАnywhere
+# https://github.com/netology-code/guides/blob/master/python%20anywhere/instruction.md
+
+# Домашнее задание к занятию 4. Создаем первого Telegram-бота
+# Задание 1
+# Модифицируйте нашего ЭхоБота таким образом, чтобы в ответ на сообщение,
+# в котором присутствует ваше имя, он не повторял его,
+# а отвечал: "Ба! Знакомые все лица!"
+#
+# Подсказки
+# Вам не нужно писать новых функций, достаточно модифицировать ту,
+# что мы написали на занятии.
+# Используйте конструкцию if word in string для того, чтобы проверить,
+# входит ли слово word в строку string.
